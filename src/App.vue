@@ -1,5 +1,5 @@
 <template>
-  <v-app class="gray lighten-4">
+  <v-app class="grey lighten-4">
     <NavBar></NavBar>
     <v-main>
       <router-view/>
@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import  NavBar from '@/components/NavBar.vue';
+import  NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
 components:{NavBar},
 data(){
-  return {}
+
 }
 }
 </script>

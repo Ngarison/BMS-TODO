@@ -1,6 +1,7 @@
 <template>
   <!-- <HelloWorld /> -->
   <div class="home">
+    homepage
   </div>
 </template>
 
