@@ -2,13 +2,32 @@
     <nav class="h-0">
         <v-toolbar flat app>
             <v-app-bar-nav-icon class="text--grey" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-toolbar-title class="text-uppercase grey--text" style="font-size:30px;">
+            <v-toolbar-title class="text-uppercase grey--text px-16" style="font-size:30px;">
                 <span class="font-weight-light" style="color:#243C87; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Todo</span>
                 <span style="color:#243C87; font-weight: bold; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BMS</span>
             </v-toolbar-title>
-            <div style="width:250px; height: 50px;">
+                <!-- Dropdown menu -->
+                <v-menu open-on-hover >
+                    <template  v-slot:activator="{props}">
+                        <v-btn
+                        color=""
+                        v-bind="props"
+                        flat
+                        >
+                        <span class="material-symbols-rounded">expand_more</span>
+                       <span>Menu</span>
+                        </v-btn>
+                    </template>
+                        <v-list>
+                            <v-list-item  v-for="link in links" :key="link.text" router :to="link.route">
+                            <v-list-item-title>{{link.text}}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                </v-menu>
+
+            <!-- <div style="width:250px; height: 50px;">
                 <v-text-field class="mt-0 mr-15 mb-10" append-inner-icon="mdi-magnify" label="Search" variant="outlined"></v-text-field>
-            </div>
+            </div> -->
             <v-btn color="grey">
                 <span>Sign Out</span>
                 <v-icon class="ml-4" icon="mdi-arrow-up-bold-box-outline"></v-icon>
@@ -49,7 +68,8 @@ data(){
             {icon: 'mdi-view-dashboard', text:'Dashboard', route:'/'},
             {icon: 'mdi-folder', text:'My Projects', route:'/MyProjects'},
             {icon: 'mdi-account', text:'Team', route:'/Team'},
-          ]}
+          ],
+        }
 }
 }
 </script>

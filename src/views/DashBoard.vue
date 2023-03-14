@@ -56,17 +56,15 @@
           </v-row>
          </v-card>
          <v-divider class="mx-15"></v-divider>
-         <FooterPage></FooterPage>
       </v-container-fluid>
   </div>
 </template>
 
 <script>
-import  FooterPage from '../components/FooterPage.vue
 export default({
   name: 'DashBoard',
 
-  components: {FooterPage},
+  components: {},
   data(){
     return{
       projects:[
