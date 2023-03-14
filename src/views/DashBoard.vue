@@ -9,7 +9,7 @@
                 <span class="caption text-lowercase">By project name</span>
                 <v-tooltip
                   activator="parent"
-                  location="bottom"
+                  location="top"
                 >Sort project by project name</v-tooltip>
               </v-btn>
 
@@ -56,17 +56,17 @@
           </v-row>
          </v-card>
          <v-divider class="mx-15"></v-divider>
+         <FooterPage></FooterPage>
       </v-container-fluid>
   </div>
 </template>
 
 <script>
-
+import  FooterPage from '../components/FooterPage.vue
 export default({
   name: 'DashBoard',
 
-  components: {
-  },
+  components: {FooterPage},
   data(){
     return{
       projects:[

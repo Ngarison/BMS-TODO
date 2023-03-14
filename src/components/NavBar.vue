@@ -6,8 +6,8 @@
                 <span class="font-weight-light" style="color:#243C87; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Todo</span>
                 <span style="color:#243C87; font-weight: bold; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BMS</span>
             </v-toolbar-title>
-            <div class="w-25">
-                <v-text-field class="mt-0 mr-15 mb-12" append-inner-icon="mdi-magnify"  style="height:5px;" label="Search" variant="outlined"></v-text-field>
+            <div style="width:250px; height: 50px;">
+                <v-text-field class="mt-0 mr-15 mb-10" append-inner-icon="mdi-magnify" label="Search" variant="outlined"></v-text-field>
             </div>
             <v-btn color="grey">
                 <span>Sign Out</span>
@@ -19,7 +19,7 @@
             <v-col no-gutters class="d-flex flex-column align-center">
                 <v-row  class="mt-5">
                     <v-avatar size="100">
-                        <v-img src="/1.png"></v-img>
+                        <v-img src="/images/1.png"></v-img>
                     </v-avatar>
                 </v-row>
                 <v-row>
