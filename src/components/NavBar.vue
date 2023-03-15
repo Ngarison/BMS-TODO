@@ -35,7 +35,7 @@
         </v-toolbar>
 <!-- //class="ma-10"  class="ma-3" -->
         <v-navigation-drawer   temporary v-model="drawer"  class="">
-            <v-col no-gutters class="d-flex flex-column align-center">
+            <v-col no-gutters class="d-flex flex-column align-center" style="gap: 15px;">
                 <v-row  class="mt-5">
                     <v-avatar size="100">
                         <v-img src="/images/1.png"></v-img>
@@ -43,6 +43,9 @@
                 </v-row>
                 <v-row>
                     <p class="text-white">Ngarison</p>
+                </v-row>
+                <v-row>
+                    <Popup></Popup>
                 </v-row>
             </v-col>
             <v-list class="mt-5">
@@ -61,7 +64,9 @@
 
 
 <script>
+import Popup from './PopupComponent.vue'
     export default {
+        components:{Popup},
 data(){
   return {drawer: false,
           links:[
